@@ -66,7 +66,7 @@ const ProductDetails = () => {
 
               <div className={styles.content}>
                 <h3>{product.name}</h3>
-                <p className={styles.price}>{`$${product.price}`}</p>
+                <p className={styles.price}>&#8377;{`${product.price}`}</p>
                 <p>{product.desc}</p>
                 <p>
                   <b>SKU</b> {product.id}
@@ -95,12 +95,19 @@ const ProductDetails = () => {
                     </>
                   )}
                 </div>
+                <div className={styles.button}>
                 <button
                   className="--btn --btn-danger"
                   onClick={() => addToCart(product)}
-                >
+                  >
                   ADD TO CART
                 </button>
+                {isCartAdded < 0 ? null : (
+                  <button className={`--btn --btn-primary ${styles.cart}`}>
+                    <Link to='/cart'>Go To Cart</Link>
+                  </button>
+                )}
+                </div>
               </div>
             </div>
           </>
@@ -130,10 +137,10 @@ const ProductDetails = () => {
                 })}
               </>
             )}
-          </div> 
+          </div>
         </Card>
       </div>
-    </section> 
+    </section>
   );
 };
 

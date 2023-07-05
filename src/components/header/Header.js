@@ -43,8 +43,6 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  
-
   const fixNavbar = () => {
     if (window.scrollY > 50) {
       setScrollPage(true);
@@ -92,7 +90,7 @@ const Header = () => {
 
   const hideMenu = () => {
     setShowMenu(false);
-  }; 
+  };
 
   const logoutUser = () => {
     signOut(auth)

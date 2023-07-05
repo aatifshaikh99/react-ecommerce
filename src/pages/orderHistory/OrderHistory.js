@@ -5,7 +5,7 @@ import { STORE_ORDERS, selectOrderHistory } from "../../redux/slice/orderSlice";
 import { selectUserID } from "../../redux/slice/authSlice";
 import styles from "./OrderHistory.module.scss";
 import Loader from "../../components/loader/Loader";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const OrderHistory = () => {
   const { data, isLoading } = useFetchCollection("orders");
@@ -13,7 +13,7 @@ const OrderHistory = () => {
   const userID = useSelector(selectUserID);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(STORE_ORDERS(data));
@@ -36,7 +36,15 @@ const OrderHistory = () => {
           {isLoading && <Loader />}
           <div className={styles.table}>
             {filteredOrders.length === 0 ? (
-              <p>No Order found</p>
+              <>
+                <p>No Order found</p>
+                <div>
+
+                <button className="--btn --btn-primary --btn-lg">
+                  <Link to={"/#products"}>Shop Now</Link>
+                </button>
+                </div>
+              </>
             ) : (
               <table>
                 <thead>
@@ -64,7 +72,7 @@ const OrderHistory = () => {
                           {orderDate} at {orderTime}
                         </td>
                         <td>{id}</td>
-                        <td>{`$${orderAmount}`}</td>
+                        <td>&#8377;{`${orderAmount}`}</td>
                         <td>
                           <p
                             className={

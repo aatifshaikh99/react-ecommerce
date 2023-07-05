@@ -93,14 +93,16 @@ const Cart = () => {
                     <tr key={id}>
                       <td>{index + 1}</td>
                       <td>
-                        <p>
-                          <b>{name}</b>
-                        </p>
-                        <img
-                          src={imageURL}
-                          alt={name}
-                          style={{ width: "100px" }}
-                        />
+                        <Link to={`/product-details/${id}`}>
+                          <p>
+                            <b>{name}</b>
+                          </p>
+                          <img
+                            src={imageURL}
+                            alt={name}
+                            style={{ width: "100px" }}
+                          />
+                        </Link>
                       </td>
                       <td>{price}</td>
                       <td>
@@ -150,7 +152,7 @@ const Cart = () => {
                   </p>
                   <div className={styles.text}>
                     <h4>Subtotal:</h4>
-                    <h3>{`$${cartTotalAmount.toFixed(2)}`}</h3>
+                    <h3>&#8377;{`${cartTotalAmount.toFixed(2)}`}</h3>
                   </div>
                   <p>Tax and shipping calculated at checkout</p>
                   <button

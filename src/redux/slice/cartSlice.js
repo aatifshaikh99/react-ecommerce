@@ -102,7 +102,7 @@ const cartSlice = createSlice({
       state.cartTotalQuantity = totalQuantity;
     },
     SAVE_URL(state, action) {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.previousURL = action.payload;
     },
   },
