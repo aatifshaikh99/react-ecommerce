@@ -11,13 +11,13 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+ 
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMP_ID,
+        "template_31kibjw",
         form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        "XBnETave9Zlqvl0Wk"
       )
       .then(
         (result) => {
