@@ -38,12 +38,10 @@ const OrderHistory = () => {
             {filteredOrders.length === 0 ? (
               <>
                 <p>No Order found</p>
-                <div>
 
                 <button className="--btn --btn-primary --btn-lg">
                   <Link to={"/#products"}>Shop Now</Link>
                 </button>
-                </div>
               </>
             ) : (
               <table>
