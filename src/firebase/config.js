@@ -7,12 +7,12 @@ import { getStorage } from "firebase/storage";
 export const firebaseConfig = {
   apiKey: process.env.REACT_APP_FB_API_KEY,
   authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FB_PROJECT_ID,
+  projectId: "eshop-e0f70",
   storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_FB_API_MSG_SENDER_ID,
   appId: process.env.REACT_APP_FB_APP_ID,
-};
-
+}; 
+ 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
