@@ -24,17 +24,13 @@ const Footer = () => {
   const [category, setCategory] = useState("All");
   const { data } = useFetchCollection("products");
 
-  const allCategories = [
-    ...new Set(data.map((product) => product.category)),
-  ];
+  const allCategories = [...new Set(data.map((product) => product.category))];
   const dispatch = useDispatch();
 
   const filterProducts = (cat) => {
     setCategory(cat);
-    dispatch(FILTER_BY_CATEGORY({ products:data, category: cat }));
+    dispatch(FILTER_BY_CATEGORY({ products: data, category: cat }));
   };
-
-  // return <div className={styles.footer}>&copy;{year} All Rights Reserved</div>;
 
   return (
     <footer>
@@ -46,7 +42,11 @@ const Footer = () => {
               <ul>
                 {allCategories.map((cat, index) => {
                   return (
-                    <li key={index} onClick={() => filterProducts(cat)} value={category}>
+                    <li
+                      key={index}
+                      onClick={() => filterProducts(cat)}
+                      value={category}
+                    >
                       <Link to="/#products">{cat}</Link>
                     </li>
                   );
