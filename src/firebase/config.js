@@ -4,14 +4,13 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
-export const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FB_API_KEY || "mock_key",
-  authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN || "authentication_key",
-  projectId: process.env.REACT_APP_FB_PROJECT_ID || "project_id",
-  storageBucket:
-    process.env.REACT_APP_FB_STORAGE_BUCKET || "storage_bucket_key",
-  messagingSenderId: process.env.REACT_APP_FB_API_MSG_SENDER_ID || "sender_id",
-  appId: process.env.REACT_APP_FB_APP_ID || "firebase_app_id",
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FB_API_KEY,
+  authDomain: "eshop-e0f70.firebaseapp.com",
+  projectId: "eshop-e0f70",
+  storageBucket: "eshop-e0f70.appspot.com",
+  messagingSenderId: "923924744907",
+  appId: "1:923924744907:web:c839e10f52eee10e73294e",
 };
 
 // Initialize Firebase
