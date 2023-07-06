@@ -15,7 +15,7 @@ const CheckoutSummary = () => {
   const cartTotalQuantity = useSelector(selectCartTotalQuantity);
 
   return (
-    <div> 
+    <div>
       <h3>Checkout Summary</h3>
       <div>
         {cartItems.length === 0 ? (
@@ -32,7 +32,7 @@ const CheckoutSummary = () => {
             </p>
             <div className={styles.text}>
               <h4>Subtotal:</h4>
-              <h3>{`$${cartTotalAmount.toFixed(2)}`}</h3>
+              <h3>&#8377; {`${cartTotalAmount.toFixed(2)}`}</h3>
             </div>
             {cartItems.map((item, index) => {
               const { id, name, price, cartQuantity } = item;
