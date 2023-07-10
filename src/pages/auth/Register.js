@@ -57,6 +57,7 @@ const Register = () => {
                 type="password"
                 placeholder="Password"
                 value={password}
+                autoComplete="off"
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
@@ -65,6 +66,7 @@ const Register = () => {
                 placeholder="Confirm Password"
                 required
                 value={cPassword}
+                autoComplete="off"
                 onChange={(e) => setCPassword(e.target.value)}
               />
               <button type="submit" className="--btn --btn-primary --btn-block">
