@@ -38,6 +38,12 @@
                 display: flex;
                 justify-content: space-between;
                 margin: 5px 0;
+                a{
+                    &:hover{
+                        color: var(--color-danger);
+                        text-decoration: underline;
+                    }
+                }
             }
 
             p {
@@ -51,6 +57,12 @@
             justify-content: center;
             align-items: center;
             margin-top: 1rem;
+            a{
+                color: var(--color-danger);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 

@@ -62,7 +62,7 @@ const Footer = () => {
               <div className={styles.icons}>
                 <span>
                   <FaPhoneAlt />
-                  <p>+91 123 456 7899</p>
+                  <p>+91 888 888 8888</p>
                 </span>
                 <span>
                   <FaEnvelope />
@@ -70,7 +70,7 @@ const Footer = () => {
                 </span>
                 <span>
                   <GoLocation />
-                  <p>Jalgaon, MH India</p>
+                  <p>Jalgaon, India</p>
                 </span>
               </div>
             </div>

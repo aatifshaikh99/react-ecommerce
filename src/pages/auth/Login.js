@@ -103,7 +103,7 @@ const Login = () => {
               className="--btn --btn-danger --btn-block"
               onClick={signInWithGoogle}
             >
-              <FaGoogle color="#fff" /> Login With Google
+              <FaGoogle color="#fff" />&nbsp;Login With Google
             </button>
             <span className={styles.register}>
               <p>Don't have an account?</p>
