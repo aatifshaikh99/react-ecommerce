@@ -42,17 +42,20 @@ const Checkout = () => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:4242/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        items: cartItems,
-        userEmail: customerEmail,
-        shipping: shippingAddress,
-        billing: billingAddress,
-        description,
-      }),
-    })
+    fetch(
+      "https://react-eshop-ecommerce-aatifshaikh99.onrender.com/create-payment-intent",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: cartItems,
+          userEmail: customerEmail,
+          shipping: shippingAddress,
+          billing: billingAddress,
+          description,
+        }),
+      }
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();
