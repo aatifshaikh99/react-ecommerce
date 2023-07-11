@@ -94,10 +94,11 @@ const CheckoutForm = () => {
         elements,
         confirmParams: {
           // Make sure to change this to your payment completion page
-          return_url: "http://localhost:3000/checkout-success",
+          return_url:
+            "https://react-ecommerrce-aatifshaikh99.vercel.app/checkout-success",
         },
         redirect: "if_required",
-      }) 
+      })
       .then((result) => {
         //ok - paymentIntent // bad - error
         if (result.error) {
